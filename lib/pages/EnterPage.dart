@@ -173,7 +173,7 @@ class _EnterPageState extends State<EnterPage> {
                   setState(() {
                     _buttonPressed = true; // Устанавливаем флаг нажатия на кнопку
                     if (_isButtonEnabled) {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) => MainPage()),
                       );

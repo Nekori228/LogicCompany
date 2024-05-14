@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'ProgBar.dart';
+import 'news1.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key? key}) : super(key: key);
@@ -13,16 +14,19 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF110F18),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text('Новости', style: TextStyle(color: Color(0xFFFFFFFF),
-            fontSize: 26,
-            fontWeight: FontWeight.w700),),
+        title: Text(
+          'Новости',
+          style: TextStyle(
+              color: Color(0xFFFFFFFF),
+              fontSize: 26,
+              fontWeight: FontWeight.w700),
+        ),
         backgroundColor: Color(0xFF170F38),
       ),
       body: SafeArea(
@@ -32,14 +36,15 @@ class _MainPageState extends State<MainPage> {
             children: [
               GestureDetector(
                 onTap: () {
-                  print('1');
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => News1(),
+                    ),
+                  );
                 },
                 child: Container(
                   margin: EdgeInsets.symmetric(
-                      horizontal: MediaQuery
-                          .of(context)
-                          .size
-                          .width * 0.05),
+                      horizontal: MediaQuery.of(context).size.width * 0.05),
                   child: Center(
                     child: Column(
                       children: [
@@ -56,15 +61,14 @@ class _MainPageState extends State<MainPage> {
                           ),
                           child: Container(
                             margin: EdgeInsets.symmetric(
-                                horizontal: MediaQuery
-                                    .of(context)
-                                    .size
-                                    .width * 0.01),
+                                horizontal:
+                                    MediaQuery.of(context).size.width * 0.01),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+                                  padding:
+                                      const EdgeInsets.fromLTRB(20, 20, 0, 0),
                                   child: Text(
                                     'В пир и в мир: искусственный интеллект в логистике и ретейле',
                                     style: TextStyle(
@@ -76,7 +80,8 @@ class _MainPageState extends State<MainPage> {
                                 ),
                                 Spacer(),
                                 Padding(
-                                  padding: const EdgeInsets.fromLTRB(20, 0, 0, 20),
+                                  padding:
+                                      const EdgeInsets.fromLTRB(20, 0, 0, 20),
                                   child: Text(
                                     'РБК, Экономика, 23 ноя, 13:27',
                                     style: TextStyle(
@@ -105,15 +110,14 @@ class _MainPageState extends State<MainPage> {
                             ),
                             child: Container(
                               margin: EdgeInsets.symmetric(
-                                  horizontal: MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width * 0.01),
+                                  horizontal:
+                                      MediaQuery.of(context).size.width * 0.01),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(20, 20, 0, 0),
                                     child: Text(
                                       'РЖД предложили автоконцернам доставлять машины по железной дороге',
                                       style: TextStyle(
@@ -125,12 +129,14 @@ class _MainPageState extends State<MainPage> {
                                   ),
                                   Spacer(),
                                   Padding(
-                                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 20),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(20, 0, 0, 20),
                                     child: Text(
                                       'РБК, Бизнес, 02 ноя, 22:22',
                                       style: TextStyle(
                                         fontSize: 16.0,
-                                        color: Color(0xFFFFFFFF).withOpacity(0.8),
+                                        color:
+                                            Color(0xFFFFFFFF).withOpacity(0.8),
                                       ),
                                     ),
                                   ),

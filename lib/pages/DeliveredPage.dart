@@ -169,7 +169,11 @@ class _DeliveredPageState extends State<DeliveredPage> {
                 SizedBox(height: 30),
                 GestureDetector(
                   onTap: () {
-                    print('2');
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => DeliverStat(),
+                      ),
+                    );
                   },
                   child: Container(
                     height: 210,
@@ -295,7 +299,11 @@ class _DeliveredPageState extends State<DeliveredPage> {
                 SizedBox(height: 30),
                 GestureDetector(
                   onTap: () {
-                    print('3');
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => DeliverStat(),
+                      ),
+                    );
                   },
                   child: Container(
                     height: 210,

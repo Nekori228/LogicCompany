@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
+import 'DeliveredPage.dart';
+
 class DeliverStat extends StatefulWidget {
   const DeliverStat({Key? key}) : super(key: key);
 
@@ -27,10 +29,16 @@ class _DeliverStatState extends State<DeliverStat> {
               fontWeight: FontWeight.w700),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(
+            Icons.arrow_back,
+            color: Color(0xFFFFFFFF),
+          ),
           onPressed: () {
-            // Возврат на предыдущий экран
-            Navigator.of(context).pop();
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (context) => DeliveredPage(),
+              ),
+            );
           },
         ),
         backgroundColor: Color(0xFF170F38),
@@ -187,7 +195,8 @@ class _DeliverStatState extends State<DeliverStat> {
                           borderRadius: BorderRadius.circular(25),
                           child: Container(
                             margin: EdgeInsets.symmetric(
-                                horizontal: MediaQuery.of(context).size.width * 0.05),
+                                horizontal:
+                                    MediaQuery.of(context).size.width * 0.05),
                             height: 200,
                             color: Color(0xFF4F4E55),
                             child: DefaultPlayer(),
@@ -287,7 +296,6 @@ class _DeliverStatState extends State<DeliverStat> {
   }
 }
 
-
 class DefaultPlayer extends StatefulWidget {
   DefaultPlayer({Key? key}) : super(key: key);
 
@@ -303,13 +311,12 @@ class _DefaultPlayerState extends State<DefaultPlayer> {
     super.initState();
     flickManager = FlickManager(
       videoPlayerController:
-      VideoPlayerController.asset('assets/video/video1.mp4'),
+          VideoPlayerController.asset('assets/video/video1.mp4'),
     );
     Timer(Duration(milliseconds: 500), () {
       flickManager.flickControlManager?.pause();
     });
   }
-
 
   @override
   void dispose() {
@@ -404,16 +411,16 @@ class _ControlsOverlay extends StatelessWidget {
           child: controller.value.isPlaying
               ? const SizedBox.shrink()
               : Container(
-            color: Colors.black26,
-            child: const Center(
-              child: Icon(
-                Icons.play_arrow,
-                color: Colors.white,
-                size: 100.0,
-                semanticLabel: 'Play',
-              ),
-            ),
-          ),
+                  color: Colors.black26,
+                  child: const Center(
+                    child: Icon(
+                      Icons.play_arrow,
+                      color: Colors.white,
+                      size: 100.0,
+                      semanticLabel: 'Play',
+                    ),
+                  ),
+                ),
         ),
         GestureDetector(
           onTap: () {
