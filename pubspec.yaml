@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_native_splash: ^2.4.0
   google_fonts: ^5.1.0
+  video_player: ^2.8.6
+  flick_video_player: ^0.5.0
+  visibility_detector: ^0.4.0+2
 
 
 
@@ -71,6 +74,7 @@ flutter:
   assets:
     - assets/
     - assets/icons/
+    - assets/video/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
