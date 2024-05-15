@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'DeliverStat.dart';
+import 'StatusDeliver/DeliverStat.dart';
 import 'ProgBar.dart';
+import 'StatusDeliver/SuccessPage.dart';
 import 'Test.dart';
 
 class DeliveredPage extends StatefulWidget {
@@ -41,7 +42,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                   onTap: () {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (context) => DeliverStat(),
+                        builder: (context) => SuccessPage(),
                       ),
                     );
                   },
@@ -69,7 +70,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                             Padding(
                               padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                               child: Text(
-                                '№ 20227 Доставлен',
+                                '№ 20226 Доставлен',
                                 style: TextStyle(
                                     color: Color(0xFF269E6E), fontSize: 20),
                               ),
@@ -199,7 +200,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                             Padding(
                               padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                               child: Text(
-                                '№ 20227 Доставлен',
+                                '№ 20225 Доставлен',
                                 style: TextStyle(
                                     color: Color(0xFF269E6E), fontSize: 20),
                               ),
@@ -329,7 +330,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                             Padding(
                               padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                               child: Text(
-                                '№ 20227 Доставлен',
+                                '№ 20224 Доставлен',
                                 style: TextStyle(
                                     color: Color(0xFF269E6E), fontSize: 20),
                               ),

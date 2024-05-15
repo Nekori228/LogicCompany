@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'ProgBar.dart';
 import 'news1.dart';
+import 'news2.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key? key}) : super(key: key);
@@ -97,7 +98,11 @@ class _MainPageState extends State<MainPage> {
                         SizedBox(height: 30),
                         GestureDetector(
                           onTap: () {
-                            print('2');
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (context) => News2(),
+                              ),
+                            );
                           },
                           child: Container(
                             height: 190,

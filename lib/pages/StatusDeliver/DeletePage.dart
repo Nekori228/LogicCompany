@@ -6,23 +6,24 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-import 'DeliveredPage.dart';
+import '../AcceptedPage.dart';
+import '../DeliveredPage.dart';
 
-class DeliverStat extends StatefulWidget {
-  const DeliverStat({Key? key}) : super(key: key);
+class DeletePage extends StatefulWidget {
+  const DeletePage({Key? key}) : super(key: key);
 
   @override
-  State<DeliverStat> createState() => _DeliverStatState();
+  State<DeletePage> createState() => _DeletePageState();
 }
 
-class _DeliverStatState extends State<DeliverStat> {
+class _DeletePageState extends State<DeletePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF110F18),
       appBar: AppBar(
         title: Text(
-          'Заказ №20230',
+          'Заказ №20227',
           style: TextStyle(
               color: Color(0xFFFFFFFF),
               fontSize: 26,
@@ -36,7 +37,7 @@ class _DeliverStatState extends State<DeliverStat> {
           onPressed: () {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
-                builder: (context) => DeliveredPage(),
+                builder: (context) => AcceptedPage(),
               ),
             );
           },
@@ -53,7 +54,7 @@ class _DeliverStatState extends State<DeliverStat> {
               children: [
                 SizedBox(height: 30),
                 Container(
-                  height: 800,
+                  height: 670,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
                       color: Color(0xFF27262B)),
@@ -67,18 +68,19 @@ class _DeliverStatState extends State<DeliverStat> {
                             height: 20,
                             width: 5,
                             decoration: BoxDecoration(
-                                color: Color(0xFFFFF500),
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(10),
-                                  bottomRight: Radius.circular(10),
-                                )),
+                              color: Color(0xFFF44A5C),
+                              borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(10),
+                                bottomRight: Radius.circular(10),
+                              ),
+                            ),
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                             child: Text(
-                              '№ 20227 Доставляется',
+                              '№ 20227 Отменён',
                               style: TextStyle(
-                                  color: Color(0xFFFFF500), fontSize: 16),
+                                  color: Color(0xFFF44A5C), fontSize: 16),
                             ),
                           ),
                           Spacer(),
@@ -111,7 +113,7 @@ class _DeliverStatState extends State<DeliverStat> {
                               Text(
                                 'Сургут',
                                 style: TextStyle(
-                                    color: Color(0xFF269E6E), fontSize: 20),
+                                    color: Color(0xFFF44A5C), fontSize: 20),
                               ),
                               Text(
                                 '1 декабря 2023',
@@ -122,7 +124,7 @@ class _DeliverStatState extends State<DeliverStat> {
                               Text(
                                 'В сборке',
                                 style: TextStyle(
-                                    color: Color(0xFF269E6E), fontSize: 20),
+                                    color: Color(0xFFFFFFFF), fontSize: 20),
                               ),
                               Text(
                                 '1 декабря 2023',
@@ -133,7 +135,7 @@ class _DeliverStatState extends State<DeliverStat> {
                               Text(
                                 'Передаётся в доставку',
                                 style: TextStyle(
-                                    color: Color(0xFF269E6E), fontSize: 20),
+                                    color: Color(0xFFFFFFFF), fontSize: 20),
                               ),
                               Text(
                                 '1 декабря 2023',
@@ -144,7 +146,7 @@ class _DeliverStatState extends State<DeliverStat> {
                               Text(
                                 'В пути',
                                 style: TextStyle(
-                                    color: Color(0xFF269E6E), fontSize: 20),
+                                    color: Color(0xFFFFFFFF), fontSize: 20),
                               ),
                               Text(
                                 '1 декабря 2023',
@@ -175,7 +177,7 @@ class _DeliverStatState extends State<DeliverStat> {
                                     fontSize: 13),
                               ),
                               Text(
-                                'Юганск',
+                                'Ханты-Мансийск',
                                 style: TextStyle(
                                     color: Color(0xFFFFFFFF), fontSize: 20),
                               ),
@@ -191,62 +193,25 @@ class _DeliverStatState extends State<DeliverStat> {
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(25),
-                          child: Container(
-                            margin: EdgeInsets.symmetric(
-                                horizontal:
-                                    MediaQuery.of(context).size.width * 0.05),
-                            height: 200,
+                        child: Container(
+                          height: 200,
+                          width: 400,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(11),
                             color: Color(0xFF4F4E55),
-                            child: DefaultPlayer(),
                           ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
-                              child: Text(
-                                'Последний отчёт',
-                                style: TextStyle(
-                                    color: Color(0xFFFFFFFF),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                            Text(
-                              '12:10 01.01.2023 - Фото',
+                          margin: EdgeInsets.symmetric(
+                              horizontal:
+                              MediaQuery.of(context).size.width * 0.05),
+                          child: Center(
+                            child: Text(
+                              'Заказ был отменён',
                               style: TextStyle(
                                   color: Color(0xFFFFFFFF),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w300),
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w600),
                             ),
-                            Text(
-                              '14:10 01.01.2023 - Фото',
-                              style: TextStyle(
-                                  color: Color(0xFFFFFFFF),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w300),
-                            ),
-                            Text(
-                              '16:10 01.01.2023 - Фото',
-                              style: TextStyle(
-                                  color: Color(0xFFFFFFFF),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w300),
-                            ),
-                            Text(
-                              '18:10 01.01.2023 - Фото',
-                              style: TextStyle(
-                                  color: Color(0xFFFFFFFF),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w300),
-                            ),
-                          ],
+                          ),
                         ),
                       ),
                       Padding(
@@ -292,142 +257,6 @@ class _DeliverStatState extends State<DeliverStat> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class DefaultPlayer extends StatefulWidget {
-  DefaultPlayer({Key? key}) : super(key: key);
-
-  @override
-  _DefaultPlayerState createState() => _DefaultPlayerState();
-}
-
-class _DefaultPlayerState extends State<DefaultPlayer> {
-  late FlickManager flickManager;
-
-  @override
-  void initState() {
-    super.initState();
-    flickManager = FlickManager(
-      videoPlayerController:
-          VideoPlayerController.asset('assets/video/video1.mp4'),
-    );
-    Timer(Duration(milliseconds: 500), () {
-      flickManager.flickControlManager?.pause();
-    });
-  }
-
-  @override
-  void dispose() {
-    flickManager.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return VisibilityDetector(
-      key: ObjectKey(flickManager),
-      onVisibilityChanged: (visibility) {},
-      child: Container(
-        child: FlickVideoPlayer(
-          flickManager: flickManager,
-          flickVideoWithControls: FlickVideoWithControls(
-            closedCaptionTextStyle: TextStyle(fontSize: 8),
-            controls: FlickPortraitControls(),
-          ),
-          flickVideoWithControlsFullscreen: FlickVideoWithControls(
-            controls: FlickLandscapeControls(),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _ButterFlyAssetVideo extends StatefulWidget {
-  @override
-  _ButterFlyAssetVideoState createState() => _ButterFlyAssetVideoState();
-}
-
-class _ButterFlyAssetVideoState extends State<_ButterFlyAssetVideo> {
-  late VideoPlayerController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = VideoPlayerController.asset('assets/video/video1.MP4');
-
-    _controller.addListener(() {
-      setState(() {});
-    });
-    _controller.setLooping(true);
-    _controller.initialize().then((_) => setState(() {}));
-    _controller.pause();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Container(
-          padding: const EdgeInsets.all(20),
-          child: AspectRatio(
-            aspectRatio: _controller.value.aspectRatio,
-            child: Stack(
-              alignment: Alignment.bottomCenter,
-              children: <Widget>[
-                VideoPlayer(_controller),
-                _ControlsOverlay(controller: _controller),
-                VideoProgressIndicator(_controller, allowScrubbing: true),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _ControlsOverlay extends StatelessWidget {
-  const _ControlsOverlay({Key? key, required this.controller})
-      : super(key: key);
-
-  final VideoPlayerController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        AnimatedSwitcher(
-          duration: const Duration(milliseconds: 50),
-          reverseDuration: const Duration(milliseconds: 200),
-          child: controller.value.isPlaying
-              ? const SizedBox.shrink()
-              : Container(
-                  color: Colors.black26,
-                  child: const Center(
-                    child: Icon(
-                      Icons.play_arrow,
-                      color: Colors.white,
-                      size: 100.0,
-                      semanticLabel: 'Play',
-                    ),
-                  ),
-                ),
-        ),
-        GestureDetector(
-          onTap: () {
-            controller.value.isPlaying ? controller.pause() : controller.play();
-          },
-        ),
-      ],
     );
   }
 }
