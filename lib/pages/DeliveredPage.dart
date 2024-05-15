@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'StatusDeliver/DeliverStat.dart';
 import 'ProgBar.dart';
 import 'StatusDeliver/SuccessPage.dart';
+import 'StatusDeliver/SuccessPage2.dart';
+import 'StatusDeliver/SuccessPage3.dart';
 import 'Test.dart';
 
 class DeliveredPage extends StatefulWidget {
@@ -172,7 +174,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                   onTap: () {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (context) => DeliverStat(),
+                        builder: (context) => SuccessPage2(),
                       ),
                     );
                   },
@@ -302,7 +304,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                   onTap: () {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (context) => DeliverStat(),
+                        builder: (context) => SuccessPage3(),
                       ),
                     );
                   },

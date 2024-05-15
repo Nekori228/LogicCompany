@@ -9,21 +9,21 @@ import 'package:visibility_detector/visibility_detector.dart';
 import '../AcceptedPage.dart';
 import '../DeliveredPage.dart';
 
-class SuccessPage extends StatefulWidget {
-  const SuccessPage({Key? key}) : super(key: key);
+class SuccessPage2 extends StatefulWidget {
+  const SuccessPage2({Key? key}) : super(key: key);
 
   @override
-  State<SuccessPage> createState() => _SuccessPageState();
+  State<SuccessPage2> createState() => _SuccessPage2State();
 }
 
-class _SuccessPageState extends State<SuccessPage> {
+class _SuccessPage2State extends State<SuccessPage2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF110F18),
       appBar: AppBar(
         title: Text(
-          'Заказ №20226',
+          'Заказ №20225',
           style: TextStyle(
               color: Color(0xFFFFFFFF),
               fontSize: 26,
@@ -77,7 +77,7 @@ class _SuccessPageState extends State<SuccessPage> {
                           Padding(
                             padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                             child: Text(
-                              '№ 20226 Доставлен',
+                              '№ 20225 Доставлен',
                               style: TextStyle(
                                   color: Color(0xFF269E6E), fontSize: 16),
                             ),
@@ -86,7 +86,7 @@ class _SuccessPageState extends State<SuccessPage> {
                           Padding(
                             padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                             child: Text(
-                              'Связь ООО',
+                              'Нефть ООО',
                               style: TextStyle(
                                   color: Color(0xFFFFFFFF), fontSize: 17),
                             ),
@@ -176,7 +176,7 @@ class _SuccessPageState extends State<SuccessPage> {
                                     fontSize: 13),
                               ),
                               Text(
-                                'Юганск',
+                                'Ханты-Мансийск',
                                 style: TextStyle(
                                     color: Color(0xFF269E6E), fontSize: 20),
                               ),
@@ -292,7 +292,7 @@ class _SuccessPageState extends State<SuccessPage> {
                           Padding(
                             padding: const EdgeInsets.fromLTRB(18, 0, 20, 0),
                             child: Text(
-                              'Фатин Антон Сергеевич',
+                              'Пущин Антон Сергеевич',
                               style: TextStyle(
                                   color: Color(0xFFFFFFFF),
                                   fontSize: 13,
@@ -323,142 +323,6 @@ class _SuccessPageState extends State<SuccessPage> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class DefaultPlayer extends StatefulWidget {
-  DefaultPlayer({Key? key}) : super(key: key);
-
-  @override
-  _DefaultPlayerState createState() => _DefaultPlayerState();
-}
-
-class _DefaultPlayerState extends State<DefaultPlayer> {
-  late FlickManager flickManager;
-
-  @override
-  void initState() {
-    super.initState();
-    flickManager = FlickManager(
-      videoPlayerController:
-      VideoPlayerController.asset('assets/video/video1.mp4'),
-    );
-    Timer(Duration(milliseconds: 500), () {
-      flickManager.flickControlManager?.pause();
-    });
-  }
-
-  @override
-  void dispose() {
-    flickManager.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return VisibilityDetector(
-      key: ObjectKey(flickManager),
-      onVisibilityChanged: (visibility) {},
-      child: Container(
-        child: FlickVideoPlayer(
-          flickManager: flickManager,
-          flickVideoWithControls: FlickVideoWithControls(
-            closedCaptionTextStyle: TextStyle(fontSize: 8),
-            controls: FlickPortraitControls(),
-          ),
-          flickVideoWithControlsFullscreen: FlickVideoWithControls(
-            controls: FlickLandscapeControls(),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _ButterFlyAssetVideo extends StatefulWidget {
-  @override
-  _ButterFlyAssetVideoState createState() => _ButterFlyAssetVideoState();
-}
-
-class _ButterFlyAssetVideoState extends State<_ButterFlyAssetVideo> {
-  late VideoPlayerController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = VideoPlayerController.asset('assets/video/video1.MP4');
-
-    _controller.addListener(() {
-      setState(() {});
-    });
-    _controller.setLooping(true);
-    _controller.initialize().then((_) => setState(() {}));
-    _controller.pause();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Container(
-          padding: const EdgeInsets.all(20),
-          child: AspectRatio(
-            aspectRatio: _controller.value.aspectRatio,
-            child: Stack(
-              alignment: Alignment.bottomCenter,
-              children: <Widget>[
-                VideoPlayer(_controller),
-                _ControlsOverlay(controller: _controller),
-                VideoProgressIndicator(_controller, allowScrubbing: true),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _ControlsOverlay extends StatelessWidget {
-  const _ControlsOverlay({Key? key, required this.controller})
-      : super(key: key);
-
-  final VideoPlayerController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        AnimatedSwitcher(
-          duration: const Duration(milliseconds: 50),
-          reverseDuration: const Duration(milliseconds: 200),
-          child: controller.value.isPlaying
-              ? const SizedBox.shrink()
-              : Container(
-            color: Colors.black26,
-            child: const Center(
-              child: Icon(
-                Icons.play_arrow,
-                color: Colors.white,
-                size: 100.0,
-                semanticLabel: 'Play',
-              ),
-            ),
-          ),
-        ),
-        GestureDetector(
-          onTap: () {
-            controller.value.isPlaying ? controller.pause() : controller.play();
-          },
-        ),
-      ],
     );
   }
 }
