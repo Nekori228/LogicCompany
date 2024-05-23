@@ -104,7 +104,7 @@ class _SuccessPage2State extends State<SuccessPage2> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.fromLTRB(17, 0, 10, 5),
-                            child: Image.asset('assets/route2.png'),
+                            child: Image.asset('assets/route5.png'),
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

@@ -105,7 +105,7 @@ class _AccessPageState extends State<AccessPage> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.fromLTRB(17, 0, 10, 5),
-                            child: Image.asset('assets/route2.png'),
+                            child: Image.asset('assets/route3.png'),
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

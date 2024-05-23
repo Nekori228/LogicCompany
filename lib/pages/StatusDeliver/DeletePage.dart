@@ -105,7 +105,7 @@ class _DeletePageState extends State<DeletePage> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.fromLTRB(17, 0, 10, 5),
-                            child: Image.asset('assets/route2.png'),
+                            child: Image.asset('assets/route4.png'),
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

@@ -35,18 +35,21 @@ class _ProjectBottomNavBarState extends State<ProjectBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      height: 72,
+      height: 74,
       color: Color(0xFF170F38),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, mainAxisSize: MainAxisSize.min, children: [
         SizedBox(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              IconButton(
-                icon: selectedPage == 0 ? Image.asset('assets/icons/icon1_press.png') : Image.asset("assets/icons/icon1_nopress.png"),
-                onPressed: () {
-                  onSelectTab(0);
-                },
+              SizedBox(
+                height: 40,
+                child: IconButton(
+                  icon: selectedPage == 0 ? Image.asset('assets/icons/icon1_press.png') : Image.asset("assets/icons/icon1_nopress.png"),
+                  onPressed: () {
+                    onSelectTab(0);
+                  },
+                ),
               ),
             ],
           ),
@@ -84,15 +87,18 @@ class _ProjectBottomNavBarState extends State<ProjectBottomNavBar> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              IconButton(
-                icon: selectedPage == 1
-                    ? Image.asset('assets/icons/icon2_press.png')
-                    : Image.asset(
-                  "assets/icons/icon2_nopress.png",
+              SizedBox(
+                height: 50,
+                child: IconButton(
+                  icon: selectedPage == 1
+                      ? Image.asset('assets/icons/icon2_press.png')
+                      : Image.asset(
+                    "assets/icons/icon2_nopress.png",
+                  ),
+                  onPressed: () {
+                    onSelectTab(1);
+                  },
                 ),
-                onPressed: () {
-                  onSelectTab(1);
-                },
               ),
             ],
           ),
@@ -101,15 +107,18 @@ class _ProjectBottomNavBarState extends State<ProjectBottomNavBar> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              IconButton(
-                icon: selectedPage == 2
-                    ? Image.asset('assets/icons/icon3_press.png')
-                    : Image.asset(
-                  "assets/icons/icon3_nopress.png",
+              SizedBox(
+                height: 50,
+                child: IconButton(
+                  icon: selectedPage == 2
+                      ? Image.asset('assets/icons/icon3_press.png')
+                      : Image.asset(
+                    "assets/icons/icon3_nopress.png",
+                  ),
+                  onPressed: () {
+                    onSelectTab(2);
+                  },
                 ),
-                onPressed: () {
-                  onSelectTab(2);
-                },
               ),
             ],
           ),
@@ -118,15 +127,18 @@ class _ProjectBottomNavBarState extends State<ProjectBottomNavBar> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              IconButton(
-                icon: selectedPage == 3
-                    ? Image.asset('assets/icons/icon4_press.png')
-                    : Image.asset(
-                  "assets/icons/icon4_nopress.png",
+              SizedBox(
+                height: 50,
+                child: IconButton(
+                  icon: selectedPage == 3
+                      ? Image.asset('assets/icons/icon4_press.png')
+                      : Image.asset(
+                    "assets/icons/icon4_nopress.png",
+                  ),
+                  onPressed: () {
+                    onSelectTab(3);
+                  },
                 ),
-                onPressed: () {
-                  onSelectTab(3);
-                },
               ),
             ],
           ),
