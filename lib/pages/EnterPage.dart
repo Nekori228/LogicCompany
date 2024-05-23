@@ -27,7 +27,7 @@ class _EnterPageState extends State<EnterPage> {
   // Флаг для отслеживания нажатия на кнопку
   void _checkInput() {
     setState(() {
-      if (_emailController.text == 'clikov_ed@mail.ru' &&
+      if (_emailController.text == 'deliv_ed@mail.ru' &&
           _passwordController.text == '1234567') {
         _isButtonEnabled = true;
       } else {
@@ -73,7 +73,7 @@ class _EnterPageState extends State<EnterPage> {
               ),
               SizedBox(height: 7),
               TextField(
-                // controller: _emailController,
+                controller: _emailController,
                 onChanged: (_) => _checkInput(),
                 decoration: InputDecoration(
                   filled: true,
@@ -123,7 +123,7 @@ class _EnterPageState extends State<EnterPage> {
               ),
               SizedBox(height: 7),
               TextField(
-                // controller: _passwordController,
+                controller: _passwordController,
                 onChanged: (_) => _checkInput(),
                 obscureText: _isObscured,
                 decoration: InputDecoration(
@@ -166,6 +166,7 @@ class _EnterPageState extends State<EnterPage> {
                     },
                   ),
                 ),
+                style: TextStyle(color: Color(0xFFFFFFFF)),
               ),
               SizedBox(height: 50),
               ElevatedButton(
@@ -179,11 +180,6 @@ class _EnterPageState extends State<EnterPage> {
                       );
                     }
                   });
-
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => MainPage()),
-                  );
                 },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
