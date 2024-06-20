@@ -278,7 +278,7 @@ class _DeliverStatState extends State<DeliverStat> {
                                 'Газель Н 039 АТ (186)',
                                 style: TextStyle(
                                   color: Color(0xFFFFFFFF),
-                                  fontSize: 13,
+                                  fontSize: 10,
                                 ),
                               ),
                             ),

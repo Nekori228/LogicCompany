@@ -73,7 +73,7 @@ class _AcceptedPageState extends State<AcceptedPage> {
                               child: Text(
                                 '№ 20228 Доставляется',
                                 style: TextStyle(
-                                    color: Color(0xFFFFF500), fontSize: 20),
+                                    color: Color(0xFFFFF500), fontSize: 15),
                               ),
                             ),
                             Spacer(),
@@ -82,7 +82,7 @@ class _AcceptedPageState extends State<AcceptedPage> {
                               child: Text(
                                 'Прямой',
                                 style: TextStyle(
-                                    color: Color(0xFFFFFFFF), fontSize: 20),
+                                    color: Color(0xFFFFFFFF), fontSize: 15),
                               ),
                             ),
                           ],

@@ -74,7 +74,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                               child: Text(
                                 '№ 20226 Доставлен',
                                 style: TextStyle(
-                                    color: Color(0xFF269E6E), fontSize: 20),
+                                    color: Color(0xFF269E6E), fontSize: 15),
                               ),
                             ),
                             Spacer(),
@@ -83,7 +83,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                               child: Text(
                                 'Связь ООО',
                                 style: TextStyle(
-                                    color: Color(0xFFFFFFFF), fontSize: 20),
+                                    color: Color(0xFFFFFFFF), fontSize: 15),
                               ),
                             ),
                           ],
@@ -158,7 +158,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                                   'Газель Н 039 АТ (186)',
                                   style: TextStyle(
                                     color: Color(0xFFFFFFFF),
-                                    fontSize: 13,
+                                    fontSize: 10,
                                   ),
                                 ),
                               ),
@@ -204,7 +204,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                               child: Text(
                                 '№ 20225 Доставлен',
                                 style: TextStyle(
-                                    color: Color(0xFF269E6E), fontSize: 20),
+                                    color: Color(0xFF269E6E), fontSize: 15),
                               ),
                             ),
                             Spacer(),
@@ -213,7 +213,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                               child: Text(
                                 'Нефть ООО',
                                 style: TextStyle(
-                                    color: Color(0xFFFFFFFF), fontSize: 20),
+                                    color: Color(0xFFFFFFFF), fontSize: 15),
                               ),
                             ),
                           ],
@@ -288,7 +288,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                                   'Газель Н 039 АТ (186)',
                                   style: TextStyle(
                                     color: Color(0xFFFFFFFF),
-                                    fontSize: 13,
+                                    fontSize: 10,
                                   ),
                                 ),
                               ),
@@ -334,7 +334,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                               child: Text(
                                 '№ 20224 Доставлен',
                                 style: TextStyle(
-                                    color: Color(0xFF269E6E), fontSize: 20),
+                                    color: Color(0xFF269E6E), fontSize: 15),
                               ),
                             ),
                             Spacer(),
@@ -343,7 +343,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                               child: Text(
                                 'Югра ООО',
                                 style: TextStyle(
-                                    color: Color(0xFFFFFFFF), fontSize: 20),
+                                    color: Color(0xFFFFFFFF), fontSize: 15),
                               ),
                             ),
                           ],
@@ -418,7 +418,7 @@ class _DeliveredPageState extends State<DeliveredPage> {
                                   'Газель Н 039 АТ (186)',
                                   style: TextStyle(
                                     color: Color(0xFFFFFFFF),
-                                    fontSize: 13,
+                                    fontSize: 10,
                                   ),
                                 ),
                               ),

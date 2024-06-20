@@ -308,7 +308,7 @@ class _SuccessPage2State extends State<SuccessPage2> {
                                 'Газель Н 039 АТ (186)',
                                 style: TextStyle(
                                   color: Color(0xFFFFFFFF),
-                                  fontSize: 13,
+                                  fontSize: 10,
                                 ),
                               ),
                             ),

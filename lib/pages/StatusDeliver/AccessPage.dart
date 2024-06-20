@@ -267,7 +267,7 @@ class _AccessPageState extends State<AccessPage> {
                                 'Газель Н 039 АТ (186)',
                                 style: TextStyle(
                                   color: Color(0xFFFFFFFF),
-                                  fontSize: 13,
+                                  fontSize: 10,
                                 ),
                               ),
                             ),
